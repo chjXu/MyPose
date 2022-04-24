@@ -1,6 +1,6 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 # from .alexnet import AlexNet
-# from .cpm import CPM
+from .cpm import CPM
 # from .hourglass import HourglassNet
 # from .hourglass_ae import HourglassAENet
 # from .hrformer import HRFormer
@@ -26,5 +26,5 @@ from .resnet import ResNet, ResNetV1d
 # from .vipnas_resnet import ViPNAS_ResNet
 
 __all__ = [
-    'ResNet', 'ResNetV1d'
+    'ResNet', 'ResNetV1d', 'CPM'
 ]
