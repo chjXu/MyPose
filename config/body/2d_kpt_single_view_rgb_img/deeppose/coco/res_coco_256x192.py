@@ -53,7 +53,7 @@ model = dict(
     train_cfg=dict(),
     test_cfg=dict(flip_test=True))
 
-# 网络配置
+# data 配置
 data_cfg = dict(
     image_size=[192, 256],
     heatmap_size=[48, 64],
@@ -70,7 +70,7 @@ data_cfg = dict(
     bbox_file= r'C:/Users/Xu Chengjun/Desktop/mypose/data/coco/person_detection_results/COCO_val2017_detections_AP_H_56_person.json',
 )
 
-# 训练策略
+# 训练流程
 train_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='TopDownRandomFlip', flip_prob=0.5),
@@ -97,7 +97,7 @@ train_pipeline = [
 ]
 
 
-# 验证策略
+# 验证流程
 val_pipeline = [
     dict(type='LoadImageFromFile'),
     dict(type='TopDownAffine'),
